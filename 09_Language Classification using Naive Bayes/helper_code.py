@@ -87,6 +87,7 @@ def do_law_of_zipf(data):
     plt.xlabel('Rank')
     plt.yscale('log')
     plt.xscale('log')
+    
 
     plt.title('Zipf\'s Law')
     plt.legend()
