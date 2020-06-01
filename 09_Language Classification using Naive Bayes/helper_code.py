@@ -51,10 +51,10 @@ def plot_confusion_matrix(y_true, y_pred, classes,
     # https://github.com/mwaskom/seaborn/issues/1773
     
     # fix for mpl bug that cuts off top/bottom of seaborn viz
-    # b, t = plt.ylim() # discover the values for bottom and top
-    # b += 0.5 # Add 0.5 to the bottom
-    # t -= 0.5 # Subtract 0.5 from the top
-    # plt.ylim(b, t) # update the ylim(bottom, top) values
+    b, t = plt.ylim() # discover the values for bottom and top
+    b += 1 # Add 0.5 to the bottom
+    t -= 1 # Subtract 0.5 from the top
+    plt.ylim(b, t) # update the ylim(bottom, top) values
     # plt.show() # ta-da!
     
 
@@ -91,6 +91,7 @@ def do_law_of_zipf(data):
 
     plt.title('Zipf\'s Law')
     plt.legend()
+    return plt
 
 
 def split_into_subwords_function(text):
